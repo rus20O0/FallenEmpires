@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=4 uid="uid://be18823fsmc5m"]
+
+[ext_resource type="Texture2D" uid="uid://c7gl7w1fscxl7" path="res://scenes/game/res/hexagon.png" id="1_0vn7t"]
+[ext_resource type="Script" path="res://scenes/game/tile_map_layer.gd" id="2_5p64v"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_umgfj"]
+resource_name = "hexagon"
+texture = ExtResource("1_0vn7t")
+texture_region_size = Vector2i(500, 540)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_tf50d"]
+tile_shape = 3
+tile_size = Vector2i(500, 540)
+occlusion_layer_0/light_mask = 1
+custom_data_layer_0/name = ""
+custom_data_layer_0/type = 0
+sources/4 = SubResource("TileSetAtlasSource_umgfj")
+
+[node name="field" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAABAAAAAAAAAABAAAABAAAAAAAAAACAAAABAAAAAAAAAADAAAABAAAAAAAAAACAAEABAAAAAAAAAABAAEABAAAAAAAAAAAAAEABAAAAAAAAAA=")
+tile_set = SubResource("TileSet_tf50d")
+script = ExtResource("2_5p64v")

@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://eg2h7a1dntgv"]
+
+[ext_resource type="Texture2D" uid="uid://cipvp1soipcth" path="res://scenes/main_menu/res/back.jpg" id="1_gjqg2"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="Back" type="Sprite2D" parent="CanvasLayer/HBoxContainer"]
+position = Vector2(962.999, 540.625)
+scale = Vector2(3.02813, 2.64432)
+texture = ExtResource("1_gjqg2")
+
+[node name="HBoxContainer5" type="BoxContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(250, 0)
+anchors_preset = -1
+anchor_left = 0.031
+anchor_top = 0.926
+anchor_right = 1.0
+anchor_bottom = 0.947
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="play_online" type="Button" parent="CanvasLayer/HBoxContainer5"]
+custom_minimum_size = Vector2(350, 80)
+layout_mode = 2
+text = "ИГРАТЬ ОНЛАЙН"
+
+[node name="play_offline" type="Button" parent="CanvasLayer/HBoxContainer5"]
+custom_minimum_size = Vector2(350, 80)
+layout_mode = 2
+text = "ИГРАТЬ ЛОКАЛЬНО"
+
+[node name="field_ed" type="Button" parent="CanvasLayer/HBoxContainer5"]
+custom_minimum_size = Vector2(180, 40)
+layout_mode = 2
+text = "РЕДАКТОР ПОЛЕЙ"
+
+[node name="settings" type="Button" parent="CanvasLayer/HBoxContainer5"]
+custom_minimum_size = Vector2(180, 40)
+layout_mode = 2
+text = "НАСТРОЙКИ"
